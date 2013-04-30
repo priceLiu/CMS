@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Model.Store" Alias="Self" Provider="System.Data.SQLite" ProviderManifestToken="ISO8601" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="L_Classs" EntityType="Model.Store.L_Classs" store:Type="Tables" />
+          <EntitySet Name="L_Feedback" EntityType="Model.Store.L_Feedback" store:Type="Tables" />
+          <EntitySet Name="L_Form" EntityType="Model.Store.L_Form" store:Type="Tables" />
+          <EntitySet Name="L_Log" EntityType="Model.Store.L_Log" store:Type="Tables" />
+          <EntitySet Name="L_Newss" EntityType="Model.Store.L_Newss" store:Type="Tables" />
+          <EntitySet Name="L_RForm" EntityType="Model.Store.L_RForm" store:Type="Tables" />
+          <EntitySet Name="L_Tags" EntityType="Model.Store.L_Tags" store:Type="Tables" />
+          <EntitySet Name="Manages" EntityType="Model.Store.Manages" store:Type="Tables" />
+          <EntitySet Name="WdBM" EntityType="Model.Store.WdBM" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="L_Classs">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Name="CID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CNmae" Type="nvarchar" />
+          <Property Name="CpareID" Type="smallint" />
+          <Property Name="CKeyWord" Type="nvarchar" />
+          <Property Name="CUrl" Type="nvarchar" />
+          <Property Name="CTag" Type="nvarchar" />
+          <Property Name="CTag2" Type="nvarchar" />
+          <Property Name="CTag3" Type="nvarchar" />
+          <Property Name="CType" Type="int" />
+          <Property Name="CSubSkin" Type="nvarchar" />
+          <Property Name="CSkin" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="L_Feedback">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NID" Type="integer" />
+          <Property Name="FName" Type="nvarchar" />
+          <Property Name="FTel" Type="nvarchar" />
+          <Property Name="FQQ" Type="nvarchar" />
+          <Property Name="FMail" Type="nvarchar" />
+          <Property Name="FTitle" Type="nvarchar" />
+          <Property Name="FContent" Type="nvarchar" />
+          <Property Name="FTime" Type="nvarchar" />
+          <Property Name="FReContent" Type="nvarchar" />
+          <Property Name="FReTime" Type="nvarchar" />
+          <Property Name="FLock" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="L_Form">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Name="FID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FNmae" Type="nvarchar" />
+          <Property Name="FStat" Type="integer" />
+          <Property Name="Fother" Type="nvarchar" />
+          <Property Name="F1" Type="nvarchar" />
+          <Property Name="FMust" Type="integer" />
+          <Property Name="FTime" Type="nvarchar" />
+          <Property Name="F1C" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="L_Log">
+          <Key>
+            <PropertyRef Name="LID" />
+          </Key>
+          <Property Name="LID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="L_TiTLE" Type="nvarchar" />
+          <Property Name="L_IP" Type="nvarchar" />
+          <Property Name="L_Time" Type="nvarchar" />
+          <Property Name="L_Act" Type="nvarchar" />
+          <Property Name="L_UID" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="L_Newss">
+          <Key>
+            <PropertyRef Name="NID" />
+          </Key>
+          <Property Name="NID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClassId" Type="int" />
+          <Property Name="Title" Type="nvarchar" />
+          <Property Name="Author" Type="nvarchar" />
+          <Property Name="From" Type="nvarchar" />
+          <Property Name="Tag" Type="nvarchar" />
+          <Property Name="ZhaiYao" Type="nvarchar" />
+          <Property Name="Img" Type="nvarchar" />
+          <Property Name="Content" Type="nvarchar" />
+          <Property Name="Click" Type="nvarchar" />
+          <Property Name="Url" Type="nvarchar" />
+          <Property Name="Time" Type="datetime" />
+          <Property Name="IsTop" Type="nvarchar" />
+          <Property Name="IsHot" Type="nvarchar" />
+          <Property Name="IsSlide" Type="nvarchar" />
+          <Property Name="IsLock" Type="nvarchar" />
+          <Property Name="IsRed" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="L_RForm">
+          <Key>
+            <PropertyRef Name="FrID" />
+          </Key>
+          <Property Name="FrID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FrName" Type="nvarchar" />
+          <Property Name="Fr1" Type="nvarchar" />
+          <Property Name="Fr2" Type="nvarchar" />
+          <Property Name="FrTime" Type="datetime" />
+          <Property Name="FrRepaly" Type="nvarchar" />
+          <Property Name="FrReOk" Type="integer" />
+          <Property Name="FrReTime" Type="datetime" />
+          <Property Name="Fr1c" Type="nvarchar" />
+          <Property Name="Fr2c" Type="nvarchar" />
+          <Property Name="FID" Type="integer" />
+        </EntityType>
+        <EntityType Name="L_Tags">
+          <Key>
+            <PropertyRef Name="TID" />
+          </Key>
+          <Property Name="TID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TName" Type="nvarchar" />
+          <Property Name="TContent" Type="nvarchar" />
+          <Property Name="TNotice" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="Manages">
+          <Key>
+            <PropertyRef Name="MID" />
+          </Key>
+          <Property Name="MID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MName" Type="nvarchar" />
+          <Property Name="MPWD" Type="nvarchar" />
+          <Property Name="MRole" Type="nvarchar" />
+          <Property Name="MPower" Type="nvarchar" />
+        </EntityType>
+        <EntityType Name="WdBM">
+          <Key>
+            <PropertyRef Name="BID" />
+          </Key>
+          <Property Name="BID" Type="integer" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Bname" Type="nvarchar" />
+          <Property Name="Btel" Type="nvarchar" />
+          <Property Name="Biden" Type="nvarchar" />
+          <Property Name="Bcom" Type="nvarchar" />
+          <Property Name="Bmail" Type="nvarchar" />
+          <Property Name="Bname2" Type="nvarchar" />
+          <Property Name="Btel2" Type="nvarchar" />
+          <Property Name="Biden2" Type="nvarchar" />
+          <Property Name="Bcom2" Type="nvarchar" />
+          <Property Name="Bmail2" Type="nvarchar" />
+          <Property Name="Bimg" Type="nvarchar" />
+          <Property Name="Bimg2" Type="nvarchar" />
+          <Property Name="Btime" Type="nvarchar" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="L_Classs" EntityType="Model.L_Classs" />
+          <EntitySet Name="L_Feedback" EntityType="Model.L_Feedback" />
+          <EntitySet Name="L_Form" EntityType="Model.L_Form" />
+          <EntitySet Name="L_Newss" EntityType="Model.L_Newss" />
+          <EntitySet Name="L_RForm" EntityType="Model.L_RForm" />
+          <EntitySet Name="L_Tags" EntityType="Model.L_Tags" />
+          <EntitySet Name="Manages" EntityType="Model.Manages" />
+          <EntitySet Name="WdBM" EntityType="Model.WdBM" />
+          <EntitySet Name="L_Log" EntityType="Model.L_Log" />
+        </EntityContainer>
+        <EntityType Name="L_Classs">
+          <Key>
+            <PropertyRef Name="CID" />
+          </Key>
+          <Property Type="Int64" Name="CID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="CNmae" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="Int16" Name="CpareID" />
+          <Property Type="String" Name="CKeyWord" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CUrl" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CTag" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CTag2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CTag3" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CType" />
+          <Property Type="String" Name="CSubSkin" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CSkin" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="L_Feedback">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Type="Int64" Name="FID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="NID" />
+          <Property Type="String" Name="FName" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTel" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FQQ" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FMail" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTitle" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FContent" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FTime" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FReContent" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FReTime" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLock" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="L_Form">
+          <Key>
+            <PropertyRef Name="FID" />
+          </Key>
+          <Property Type="Int64" Name="FID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FNmae" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="FStat" />
+          <Property Type="String" Name="Fother" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="F1" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="FMust" />
+          <Property Type="String" Name="FTime" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="F1C" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="L_Newss">
+          <Key>
+            <PropertyRef Name="NID" />
+          </Key>
+          <Property Type="Int64" Name="NID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ClassId" />
+          <Property Type="String" Name="Title" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Author" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="From" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Tag" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ZhaiYao" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Img" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Content" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Click" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Url" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="Time" />
+          <Property Type="String" Name="IsTop" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IsHot" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IsSlide" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IsLock" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IsRed" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="L_RForm">
+          <Key>
+            <PropertyRef Name="FrID" />
+          </Key>
+          <Property Type="Int64" Name="FrID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FrName" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fr1" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fr2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="FrTime" />
+          <Property Type="String" Name="FrRepaly" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="FrReOk" />
+          <Property Type="DateTime" Name="FrReTime" />
+          <Property Type="String" Name="Fr1c" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Fr2c" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="Int64" Name="FID" />
+        </EntityType>
+        <EntityType Name="L_Tags">
+          <Key>
+            <PropertyRef Name="TID" />
+          </Key>
+          <Property Type="Int64" Name="TID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TName" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TContent" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TNotice" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Manages">
+          <Key>
+            <PropertyRef Name="MID" />
+          </Key>
+          <Property Type="Int64" Name="MID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="MName" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MPWD" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MRole" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MPower" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="WdBM">
+          <Key>
+            <PropertyRef Name="BID" />
+          </Key>
+          <Property Type="Int64" Name="BID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Bname" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Btel" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Biden" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bcom" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bmail" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bname2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Btel2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Biden2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bcom2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bmail2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bimg" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Bimg2" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Btime" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="L_Log">
+          <Key>
+            <PropertyRef Name="LID" />
+          </Key>
+          <Property Type="Int64" Name="LID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="L_TiTLE" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="L_IP" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="L_Time" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="L_Act" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="L_UID" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="L_Classs">
+            <EntityTypeMapping TypeName="Model.L_Classs">
+              <MappingFragment StoreEntitySet="L_Classs">
+                <ScalarProperty Name="CSkin" ColumnName="CSkin" />
+                <ScalarProperty Name="CSubSkin" ColumnName="CSubSkin" />
+                <ScalarProperty Name="CType" ColumnName="CType" />
+                <ScalarProperty Name="CTag3" ColumnName="CTag3" />
+                <ScalarProperty Name="CTag2" ColumnName="CTag2" />
+                <ScalarProperty Name="CTag" ColumnName="CTag" />
+                <ScalarProperty Name="CUrl" ColumnName="CUrl" />
+                <ScalarProperty Name="CKeyWord" ColumnName="CKeyWord" />
+                <ScalarProperty Name="CpareID" ColumnName="CpareID" />
+                <ScalarProperty Name="CNmae" ColumnName="CNmae" />
+                <ScalarProperty Name="CID" ColumnName="CID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Feedback">
+            <EntityTypeMapping TypeName="Model.L_Feedback">
+              <MappingFragment StoreEntitySet="L_Feedback">
+                <ScalarProperty Name="FLock" ColumnName="FLock" />
+                <ScalarProperty Name="FReTime" ColumnName="FReTime" />
+                <ScalarProperty Name="FReContent" ColumnName="FReContent" />
+                <ScalarProperty Name="FTime" ColumnName="FTime" />
+                <ScalarProperty Name="FContent" ColumnName="FContent" />
+                <ScalarProperty Name="FTitle" ColumnName="FTitle" />
+                <ScalarProperty Name="FMail" ColumnName="FMail" />
+                <ScalarProperty Name="FQQ" ColumnName="FQQ" />
+                <ScalarProperty Name="FTel" ColumnName="FTel" />
+                <ScalarProperty Name="FName" ColumnName="FName" />
+                <ScalarProperty Name="NID" ColumnName="NID" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Form">
+            <EntityTypeMapping TypeName="Model.L_Form">
+              <MappingFragment StoreEntitySet="L_Form">
+                <ScalarProperty Name="F1C" ColumnName="F1C" />
+                <ScalarProperty Name="FTime" ColumnName="FTime" />
+                <ScalarProperty Name="FMust" ColumnName="FMust" />
+                <ScalarProperty Name="F1" ColumnName="F1" />
+                <ScalarProperty Name="Fother" ColumnName="Fother" />
+                <ScalarProperty Name="FStat" ColumnName="FStat" />
+                <ScalarProperty Name="FNmae" ColumnName="FNmae" />
+                <ScalarProperty Name="FID" ColumnName="FID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Newss">
+            <EntityTypeMapping TypeName="Model.L_Newss">
+              <MappingFragment StoreEntitySet="L_Newss">
+                <ScalarProperty Name="IsRed" ColumnName="IsRed" />
+                <ScalarProperty Name="IsLock" ColumnName="IsLock" />
+                <ScalarProperty Name="IsSlide" ColumnName="IsSlide" />
+                <ScalarProperty Name="IsHot" ColumnName="IsHot" />
+                <ScalarProperty Name="IsTop" ColumnName="IsTop" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Click" ColumnName="Click" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="ZhaiYao" ColumnName="ZhaiYao" />
+                <ScalarProperty Name="Tag" ColumnName="Tag" />
+                <ScalarProperty Name="From" ColumnName="From" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+                <ScalarProperty Name="NID" ColumnName="NID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_RForm">
+            <EntityTypeMapping TypeName="Model.L_RForm">
+              <MappingFragment StoreEntitySet="L_RForm">
+                <ScalarProperty Name="FID" ColumnName="FID" />
+                <ScalarProperty Name="Fr2c" ColumnName="Fr2c" />
+                <ScalarProperty Name="Fr1c" ColumnName="Fr1c" />
+                <ScalarProperty Name="FrReTime" ColumnName="FrReTime" />
+                <ScalarProperty Name="FrReOk" ColumnName="FrReOk" />
+                <ScalarProperty Name="FrRepaly" ColumnName="FrRepaly" />
+                <ScalarProperty Name="FrTime" ColumnName="FrTime" />
+                <ScalarProperty Name="Fr2" ColumnName="Fr2" />
+                <ScalarProperty Name="Fr1" ColumnName="Fr1" />
+                <ScalarProperty Name="FrName" ColumnName="FrName" />
+                <ScalarProperty Name="FrID" ColumnName="FrID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Tags">
+            <EntityTypeMapping TypeName="Model.L_Tags">
+              <MappingFragment StoreEntitySet="L_Tags">
+                <ScalarProperty Name="TNotice" ColumnName="TNotice" />
+                <ScalarProperty Name="TContent" ColumnName="TContent" />
+                <ScalarProperty Name="TName" ColumnName="TName" />
+                <ScalarProperty Name="TID" ColumnName="TID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Manages">
+            <EntityTypeMapping TypeName="Model.Manages">
+              <MappingFragment StoreEntitySet="Manages">
+                <ScalarProperty Name="MPower" ColumnName="MPower" />
+                <ScalarProperty Name="MRole" ColumnName="MRole" />
+                <ScalarProperty Name="MPWD" ColumnName="MPWD" />
+                <ScalarProperty Name="MName" ColumnName="MName" />
+                <ScalarProperty Name="MID" ColumnName="MID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WdBM">
+            <EntityTypeMapping TypeName="Model.WdBM">
+              <MappingFragment StoreEntitySet="WdBM">
+                <ScalarProperty Name="Btime" ColumnName="Btime" />
+                <ScalarProperty Name="Bimg2" ColumnName="Bimg2" />
+                <ScalarProperty Name="Bimg" ColumnName="Bimg" />
+                <ScalarProperty Name="Bmail2" ColumnName="Bmail2" />
+                <ScalarProperty Name="Bcom2" ColumnName="Bcom2" />
+                <ScalarProperty Name="Biden2" ColumnName="Biden2" />
+                <ScalarProperty Name="Btel2" ColumnName="Btel2" />
+                <ScalarProperty Name="Bname2" ColumnName="Bname2" />
+                <ScalarProperty Name="Bmail" ColumnName="Bmail" />
+                <ScalarProperty Name="Bcom" ColumnName="Bcom" />
+                <ScalarProperty Name="Biden" ColumnName="Biden" />
+                <ScalarProperty Name="Btel" ColumnName="Btel" />
+                <ScalarProperty Name="Bname" ColumnName="Bname" />
+                <ScalarProperty Name="BID" ColumnName="BID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="L_Log">
+            <EntityTypeMapping TypeName="Model.L_Log">
+              <MappingFragment StoreEntitySet="L_Log">
+                <ScalarProperty Name="L_UID" ColumnName="L_UID" />
+                <ScalarProperty Name="L_Act" ColumnName="L_Act" />
+                <ScalarProperty Name="L_Time" ColumnName="L_Time" />
+                <ScalarProperty Name="L_IP" ColumnName="L_IP" />
+                <ScalarProperty Name="L_TiTLE" ColumnName="L_TiTLE" />
+                <ScalarProperty Name="LID" ColumnName="LID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModSQL" ZoomLevel="72">
+        <EntityTypeShape EntityType="Model.L_Classs" Width="1.5" PointX="0.75" PointY="0.75" Height="3.1161507161458317" />
+        <EntityTypeShape EntityType="Model.L_Feedback" Width="1.5" PointX="2.75" PointY="0.75" Height="3.3071704101562531" />
+        <EntityTypeShape EntityType="Model.L_Form" Width="1.5" PointX="4.75" PointY="0.75" Height="2.5430916341145817" />
+        <EntityTypeShape EntityType="Model.L_Newss" Width="1.5" PointX="4.75" PointY="4.75" Height="4.2622688802083317" />
+        <EntityTypeShape EntityType="Model.L_RForm" Width="1.5" PointX="0.75" PointY="5.75" Height="3.1161507161458388" />
+        <EntityTypeShape EntityType="Model.L_Tags" Width="1.5" PointX="6.75" PointY="0.75" Height="1.7790128580729174" />
+        <EntityTypeShape EntityType="Model.Manages" Width="1.5" PointX="6.75" PointY="3.75" Height="1.9700325520833388" />
+        <EntityTypeShape EntityType="Model.WdBM" Width="1.5" PointX="6.75" PointY="6.75" Height="3.6892097981770888" />
+        <EntityTypeShape EntityType="Model.L_Log" Width="1.5" PointX="9.375" PointY="0.75" Height="2.1610522460937496" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

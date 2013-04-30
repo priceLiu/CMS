@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www", ".", "{F550DD1A-6B72-4155-BE69-3CE55690729A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/www"
+		Debug.AspNetCompiler.PhysicalPath = "F:\cfsqlit\www\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\www\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/www"
+		Release.AspNetCompiler.PhysicalPath = "F:\cfsqlit\www\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\www\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1137"
+		VWDVirtualPath = "/"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F550DD1A-6B72-4155-BE69-3CE55690729A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F550DD1A-6B72-4155-BE69-3CE55690729A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
