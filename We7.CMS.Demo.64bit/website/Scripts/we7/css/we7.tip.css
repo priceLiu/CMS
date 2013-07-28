@@ -1,0 +1,217 @@
+﻿
+/*
+TODO：组件 z-index 标准化
+*/
+
+
+.tooltip-status
+{
+	background-color:#eee;
+	border:1px solid #cc9;
+	padding:3px 5px;
+	position:fixed;
+	_position:absolute;		/* Fixed Hack For IE6，此案例中无需其他效果，不需脚本辅助 fixed */
+	top:100px;
+	z-index:1000;
+	box-shadow:2px 2px 5px #666;
+	border-radius:4px;
+	display:none;
+}
+
+.tooltip-status-RightBottom
+{
+	background-color:#eee;
+	border:1px solid #cc9;
+	padding:3px 5px ;
+	position:fixed;
+	_position:absolute;		/* Fixed Hack For IE6，此案例中无需其他效果，不需脚本辅助 fixed */
+	bottom:10px;
+	right:20px;
+	z-index:500;
+	box-shadow:2px 2px 5px #666;
+	border-radius:4px;
+	display:none;
+}
+.tooltip-status p[rel="tipcontent"]
+{
+	font-size:12px;
+	line-height:150%;
+	color:#130c0e;
+	margin:0 auto;
+	min-width:90px;
+	min-height:24px;
+	max-width:390px;
+	max-height:74px;
+	overflow-x:visible;
+	overflow-y:auto;
+}
+
+/*鼠标跟随的提示（类似于 title ）*/
+.tooltip-follow
+{
+	background-color:#ffa;
+	border:1px solid #cc9;
+	padding:3px;
+	font-size:12px;
+	line-height:150%;
+	box-shadow:2px 2px 11px #666;
+	z-index:10;
+}
+
+.tooltip-popup,.tooltip-hint{
+	position:relative;
+	color:white;
+	
+	overflow:visible;
+	z-index:100;
+	opacity:0.85;
+	filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=85);
+}
+.tooltip-popup
+{
+	width:180px;
+}
+
+.tooltip-popup .popup-content,.tooltip-hint .hint-content
+{
+	font-size:12px;
+	line-height:120%;
+
+	padding:5px;
+	background-color:#353535;
+
+	border-radius:4px;
+	box-shadow:2px 2px 4px #292929;
+}
+.tooltip-popup .popup-content
+{
+	word-break:break-all;
+	word-wrap:break-word;
+
+	min-height:40px;
+	max-height:100px;	
+	overflow-x:hidden;
+	overflow-y:visible;
+}
+	
+.tooltip-hint .hint-content
+{
+	overflow-y:hidden;
+	width:120px;
+	max-width:240px;
+	overflow-x:visible;
+	max-height:100px;
+}
+
+.triangle{width:100%;height:14px;background-image:url(res/trangles.png);background-repeat:no-repeat;}
+.tooltip-hint .triangle{height:8px;}
+.triangle-top{display:none;}
+.triangle-bottom{display:block;}
+.popup-at-bottom .triangle-bottom,.hint-at-bottom .triangle-bottom{display:none;}
+.popup-at-bottom .triangle-top,.hint-at-bottom .triangle-top{display:block;}
+
+.tooltip-popup .triangle-top{background-position:center 0px;}
+.tooltip-hint .triangle-top{background-position:120% 0px;}
+.tooltip-popup .triangle-bottom{background-position:center -48px;}
+.tooltip-hint .triangle-bottom{background-position:120% -53px;}
+
+.tooltip-help
+{
+	display:inline-block;
+	width:12px;
+	text-decoration:none;
+	height:12px;
+	background:url(res/info.png);
+	cursor:help;
+	font-size:12px;
+	line-height:12px;
+}
+
+/* 注销浏览器的默认行为 */
+input:invalid{border:interal}			
+
+/* 当表单中发生验证错误时的提示 */
+.validator-error,.validator-ok
+{
+	height:15px;
+	background-color:#feeeed;
+	background-image:url(res/error.gif);
+	background-repeat:no-repeat;
+	background-position:left center;
+	border:1px solid #f391a9;
+	font-size:11px;
+	color:#000;
+	padding:3px 5px 3px 18px;
+	
+	border-radius:4px;
+	border-bottom-left-radius:0;
+	border-top-left-radius:0;
+	box-shadow:0 0 6px #ddd;
+}
+
+.validator-ok
+{
+	background-color:#cde6c7;
+	background-image:url(res/allow.gif);
+	background-repeat:no-repeat;
+	border:1px solid #65c294;
+}
+
+.validator-error p,.validator-ok p{margin:0;padding:0}
+.validator-invalid{border:1px sold #ff5656;box-shadow:0 0 2px #ffabab;}
+
+.validator-ajax-loading
+{
+		background-color:#f2eada;
+		border:1px solid #f6f5ec;
+		padding:3px;
+		padding-left:18px;
+		background-image:url(res/ajax-loading.gif);
+		background-repeat:no-repeat;
+		background-position:left center;
+		font-size:12px;
+		line-height:150%;
+		box-shadow:2px 2px 5px #d9d6c3;
+		z-index:10;		
+}
+
+
+.we7tree ul,.we7tree li
+{
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.we7tree .parentNode{}           /* 有子节点的树节点（节点） */
+.we7tree .singleNode{}          /* 无子节点的树节点（节点） */
+.we7tree .ajaxNode{}            /* ajax 提示“请稍后”节点（节点） */
+.we7tree .nodeContent{}        /* 节点的内容（节点内容，可作单个树节点图标用） */
+.we7tree .subTree{margin-left:18px;}				 /* 节树（整个子树 UL） */
+.we7tree .hitarea{width:18px;height:15px;display:inline-block;}
+.we7tree .parentNode>.hitarea{cursor: pointer;}
+.we7tree .nodeContent:hover{background-color:#d0d0d0;color:#000;}
+.we7tree .expandable>.nodeContent{background-image:url("res/li-last.png");background-position: -1px -15px;background-repeat:no-repeat;padding-left:18px;}
+.we7tree .collapsible>.nodeContent{background-image:url("res/li-last.png");background-position: -1px -32px;background-repeat:no-repeat;padding-left:18px;}
+ .we7tree .expandable>.hitarea{background-image:url("res/tree.png");background-position: -2px -17px;background-repeat: no-repeat;} 
+.we7tree .collapsible>.hitarea{background-image:url("res/tree.png");background-position: -20px -17px;background-repeat: no-repeat; }
+.we7tree .subTree .expandable>.hitarea{background-position:-3px 0;}
+.we7tree .subTree .collapsible>.hitarea{background-position:-21px 0;}
+
+.we7tree .subTree  .singleNode>.hitarea{background-image:url("res/tree.png");background-position: 1px -55px;background-repeat: no-repeat;}
+.we7tree .subTree li[tree]{background-image:url("res/tree.png");background-position: -39px 0;background-repeat: repeat-y;}
+.we7tree .subTree>li.lastChildNode{background-image:url("res/li-last.png");background-position: -6px 2px;background-repeat:no-repeat;}
+.we7tree .subTree>li.lastNestedNode,.we7tree .subTree>li.lastChildNode>.hitarea{background-image:none;}
+
+
+.we7tree .ajaxNode>.hitarea{background-image:url("res/ajax-loading.gif");background-repeat:no-repeat;}
+.we7tree .currentNode{background-color: #3e4145;color:#fffef9;}
+
+
+.contextmenu{position:absolute;background-color: #d0d0d0;color:#000038;box-shadow:1px 1px 2px #828282;border-radius: 2px;margin:0;padding:0;}
+.menuitem{width:80px;height:20px;margin:5px;padding-left:12px;max-width:220px;line-height:150%;cursor: pointer;}
+.menuitem:hover{background-color:#464646;color:White}
+
+/* .we7tree .expandable>.hitarea{background-image:url("res/plus.png");background-position: 1px 3px;background-repeat: no-repeat;} 
+.we7tree .expandable>.hitarea:hover{background-position: 1px -12px;}
+.we7tree .collapsible>.hitarea{background-image:url("res/minus.png");background-position: 1px 3px;background-repeat: no-repeat; }
+.we7tree .collapsible>.hitarea:hover{background-position: 1px -12px;} */

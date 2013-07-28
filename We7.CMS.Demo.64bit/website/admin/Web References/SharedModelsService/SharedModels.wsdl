@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetContentModels">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetContentModelsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetContentModelsResult" type="tns:ArrayOfContentModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfContentModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ContentModel" nillable="true" type="tns:ContentModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContentModel">
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="label" type="s:string" />
+        <s:attribute name="description" type="s:string" />
+        <s:attribute name="state" type="s:int" use="required" />
+        <s:attribute name="defaultcontextname" type="s:string" />
+        <s:attribute name="value" type="s:int" use="required" />
+        <s:attribute name="type" type="tns:ModelType" use="required" />
+        <s:attribute name="SiteID" type="s:string" />
+        <s:attribute name="SiteName" type="s:string" />
+        <s:attribute name="IsShare" type="s:boolean" use="required" />
+        <s:attribute name="Updated" type="s:dateTime" use="required" />
+      </s:complexType>
+      <s:simpleType name="ModelType">
+        <s:restriction base="s:string">
+          <s:enumeration value="article" />
+          <s:enumeration value="advice" />
+          <s:enumeration value="account" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetModelInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modelname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModelInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModelInfoResult" type="tns:ModelInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ModelInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="tns:We7DataSet" />
+          <s:element minOccurs="0" maxOccurs="1" name="layout" type="tns:Layout" />
+        </s:sequence>
+        <s:attribute name="type" type="tns:ModelType" use="required" />
+        <s:attribute name="label" type="s:string" />
+        <s:attribute name="desc" type="s:string" />
+        <s:attribute name="parameters" type="s:string" />
+        <s:attribute name="authority" type="s:boolean" use="required" />
+        <s:attribute name="RelationModelName" type="s:string" />
+        <s:attribute name="SiteID" type="s:string" />
+        <s:attribute name="DBConnectionString" type="s:string" />
+        <s:attribute name="IsShare" type="s:boolean" use="required" />
+        <s:attribute name="Updated" type="s:dateTime" use="required" />
+        <s:attribute name="DBDriver" type="s:string" />
+        <s:attribute name="DBType" type="s:string" />
+      </s:complexType>
+      <s:complexType name="We7DataSet">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="dataTable" type="tns:We7DataTable" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="We7DataTable">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="dataColumn" type="tns:We7DataColumn" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="We7DataColumn">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="param" type="tns:Param" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="label" type="s:string" />
+        <s:attribute name="dataType" type="tns:TypeCode" use="required" />
+        <s:attribute name="expression" type="s:string" />
+        <s:attribute name="direction" type="tns:ParameterDirection" use="required" />
+        <s:attribute name="system" type="s:boolean" use="required" />
+        <s:attribute name="mapping" type="s:string" />
+        <s:attribute name="maxlength" type="s:int" use="required" />
+        <s:attribute name="default" type="s:string" />
+        <s:attribute name="nullable" type="s:boolean" use="required" />
+        <s:attribute name="require" type="s:boolean" use="required" />
+        <s:attribute name="edit" type="s:boolean" use="required" />
+        <s:attribute name="list" type="s:boolean" use="required" />
+        <s:attribute name="design" type="s:string" />
+      </s:complexType>
+      <s:complexType name="Param">
+        <s:simpleContent>
+          <s:extension base="s:string">
+            <s:attribute name="name" type="s:string" />
+            <s:attribute name="value" type="s:string" />
+          </s:extension>
+        </s:simpleContent>
+      </s:complexType>
+      <s:simpleType name="TypeCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Empty" />
+          <s:enumeration value="Object" />
+          <s:enumeration value="DBNull" />
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="Char" />
+          <s:enumeration value="SByte" />
+          <s:enumeration value="Byte" />
+          <s:enumeration value="Int16" />
+          <s:enumeration value="UInt16" />
+          <s:enumeration value="Int32" />
+          <s:enumeration value="UInt32" />
+          <s:enumeration value="Int64" />
+          <s:enumeration value="UInt64" />
+          <s:enumeration value="Single" />
+          <s:enumeration value="Double" />
+          <s:enumeration value="Decimal" />
+          <s:enumeration value="DateTime" />
+          <s:enumeration value="String" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ParameterDirection">
+        <s:restriction base="s:string">
+          <s:enumeration value="Input" />
+          <s:enumeration value="Output" />
+          <s:enumeration value="InputOutput" />
+          <s:enumeration value="ReturnValue" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Layout">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="panel" type="tns:Panel" />
+          <s:element minOccurs="0" maxOccurs="1" name="UCContrl" type="tns:UCControl" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Panel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="edit" type="tns:EditInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="list" type="tns:ListInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="pager" type="tns:PagerInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="condition" type="tns:ConditionInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="command" type="tns:CommandInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="navigation" type="tns:NavigationInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="context" type="tns:PanelContext" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="label" type="s:string" />
+      </s:complexType>
+      <s:complexType name="EditInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContainerInfo">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="group" type="tns:Group" />
+            </s:sequence>
+            <s:attribute name="layout" type="s:string" />
+            <s:attribute name="viewerPath" type="s:string" />
+            <s:attribute name="viewerLayout" type="s:string" />
+            <s:attribute name="viewerCss" type="s:string" />
+            <s:attribute name="editCss" type="s:string" />
+            <s:attribute name="ucLayout" type="s:string" />
+            <s:attribute name="ucCss" type="s:string" />
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContainerInfo">
+        <s:attribute name="path" type="s:string" />
+        <s:attribute name="visible" type="s:boolean" use="required" />
+        <s:attribute name="name" type="s:string" />
+      </s:complexType>
+      <s:complexType name="NavigationInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContainerInfo" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CommandInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContainerInfo" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ConditionInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContainerInfo">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="control" type="tns:We7Control" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="We7Control">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="param" type="tns:Param" />
+        </s:sequence>
+        <s:attribute name="id" type="s:string" />
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="label" type="s:string" />
+        <s:attribute name="type" type="s:string" />
+        <s:attribute name="width" type="s:string" />
+        <s:attribute name="height" type="s:string" />
+        <s:attribute name="css" type="s:string" />
+        <s:attribute name="default" type="s:string" />
+        <s:attribute name="required" type="s:boolean" use="required" />
+        <s:attribute name="desc" type="s:string" />
+        <s:attribute name="visible" type="s:boolean" use="required" />
+        <s:attribute name="ignore" type="s:boolean" use="required" />
+      </s:complexType>
+      <s:complexType name="PagerInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContainerInfo" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ListInfo">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContainerInfo">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="group" type="tns:Group" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Group">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="control" type="tns:We7Control" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="column" type="tns:ColumnInfo" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="index" type="s:int" use="required" />
+        <s:attribute name="next" type="s:int" use="required" />
+        <s:attribute name="enable" type="s:boolean" use="required" />
+      </s:complexType>
+      <s:complexType name="ColumnInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="param" type="tns:Param" />
+        </s:sequence>
+        <s:attribute name="name" type="s:string" />
+        <s:attribute name="label" type="s:string" />
+        <s:attribute name="width" type="s:string" />
+        <s:attribute name="height" type="s:string" />
+        <s:attribute name="type" type="s:string" />
+        <s:attribute name="align" type="tns:HorizontalAlign" use="required" />
+        <s:attribute name="index" type="s:int" use="required" />
+        <s:attribute name="visible" type="s:boolean" use="required" />
+        <s:attribute name="isThumb" type="s:boolean" use="required" />
+        <s:attribute name="isLink" type="s:boolean" use="required" />
+        <s:attribute name="mapping" type="s:string" />
+        <s:attribute name="expr" type="s:string" />
+        <s:attribute name="convert" type="s:string" />
+      </s:complexType>
+      <s:simpleType name="HorizontalAlign">
+        <s:restriction base="s:string">
+          <s:enumeration value="NotSet" />
+          <s:enumeration value="Left" />
+          <s:enumeration value="Center" />
+          <s:enumeration value="Right" />
+          <s:enumeration value="Justify" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="PanelContext">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:QueryContext">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="dataKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="c" type="tns:Criteria" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="QueryContext">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="orders" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Criteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mode" type="tns:CriteriaMode" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:CriteriaType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Criterias" type="tns:ArrayOfCriteria" />
+          <s:element minOccurs="1" maxOccurs="1" name="Adorn" type="tns:Adorns" />
+          <s:element minOccurs="1" maxOccurs="1" name="Start" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Length" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CriteriaMode">
+        <s:restriction base="s:string">
+          <s:enumeration value="And" />
+          <s:enumeration value="Or" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CriteriaType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Like" />
+          <s:enumeration value="MoreThan" />
+          <s:enumeration value="MoreThanEquals" />
+          <s:enumeration value="LessThan" />
+          <s:enumeration value="LessThanEquals" />
+          <s:enumeration value="Equals" />
+          <s:enumeration value="NotEquals" />
+          <s:enumeration value="NotLike" />
+          <s:enumeration value="IsNull" />
+          <s:enumeration value="IsNotNull" />
+          <s:enumeration value="Desc" />
+          <s:enumeration value="Asc" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfCriteria">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Criteria" nillable="true" type="tns:Criteria" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Adorns">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Average" />
+          <s:enumeration value="Distinct" />
+          <s:enumeration value="Maximum" />
+          <s:enumeration value="Minimum" />
+          <s:enumeration value="Sum" />
+          <s:enumeration value="Substring" />
+          <s:enumeration value="Total" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="UCControl">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="listFields" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="detailFields" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="widgetListFields" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="widgetDetailFields" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="createEditor" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="adminEditor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adminEditorCss" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adminViewer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="adminViewerCss" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetModelInfoFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modelname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetModelInfoFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetModelInfoFileResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWidgets">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modelname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWidgetsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWidgetsResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetContentModelsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetContentModels" />
+  </wsdl:message>
+  <wsdl:message name="GetContentModelsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetContentModelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModelInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModelInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetModelInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModelInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetModelInfoFileSoapIn">
+    <wsdl:part name="parameters" element="tns:GetModelInfoFile" />
+  </wsdl:message>
+  <wsdl:message name="GetModelInfoFileSoapOut">
+    <wsdl:part name="parameters" element="tns:GetModelInfoFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWidgets" />
+  </wsdl:message>
+  <wsdl:message name="GetWidgetsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWidgetsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SharedModelsSoap">
+    <wsdl:operation name="GetContentModels">
+      <wsdl:input message="tns:GetContentModelsSoapIn" />
+      <wsdl:output message="tns:GetContentModelsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelInfo">
+      <wsdl:input message="tns:GetModelInfoSoapIn" />
+      <wsdl:output message="tns:GetModelInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetModelInfoFile">
+      <wsdl:input message="tns:GetModelInfoFileSoapIn" />
+      <wsdl:output message="tns:GetModelInfoFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgets">
+      <wsdl:input message="tns:GetWidgetsSoapIn" />
+      <wsdl:output message="tns:GetWidgetsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SharedModelsSoap" type="tns:SharedModelsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContentModels">
+      <soap:operation soapAction="http://tempuri.org/GetContentModels" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelInfo">
+      <soap:operation soapAction="http://tempuri.org/GetModelInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelInfoFile">
+      <soap:operation soapAction="http://tempuri.org/GetModelInfoFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgets">
+      <soap:operation soapAction="http://tempuri.org/GetWidgets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SharedModelsSoap12" type="tns:SharedModelsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContentModels">
+      <soap12:operation soapAction="http://tempuri.org/GetContentModels" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetModelInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetModelInfoFile">
+      <soap12:operation soapAction="http://tempuri.org/GetModelInfoFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWidgets">
+      <soap12:operation soapAction="http://tempuri.org/GetWidgets" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SharedModels">
+    <wsdl:port name="SharedModelsSoap" binding="tns:SharedModelsSoap">
+      <soap:address location="http://127.0.0.1:8077/admin/ContentModel/SharedModels.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SharedModelsSoap12" binding="tns:SharedModelsSoap12">
+      <soap12:address location="http://127.0.0.1:8077/admin/ContentModel/SharedModels.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

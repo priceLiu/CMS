@@ -1,0 +1,369 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:xh_home_news
+ * Style:xh_home_news
+ * Desc::ArticleList.Default部件的样式
+ * Quot:
+*************************************************************/
+.xh_home_news .area {
+    width:312px;
+    height:449px;
+}
+.xh_home_news .area h3 {
+    height:30px;
+    line-height:20px;
+    font-size:15px;
+    background:url(../images/xh_xhyw_h3_bg.jpg) no-repeat left bottom;
+    color:#399DD9;
+    font-family:"微软雅黑";
+    position:relative;    
+}
+/*******标题自适应***********/
+.xh_home_news .area h3 span {
+    font:11px "微软雅黑";
+    color:#6F716E;
+
+}
+.xh_home_news .area h3 em {
+    background:url(../images/sidebar.gif) no-repeat right -33px;
+    padding-right:35px;
+    color:#fff;
+    display:inline-block;
+}
+.xh_home_news .area h3 em a {
+    color:#fff;
+}
+.xh_home_news .area h3 em a:hover {
+    color:#ffff00;
+}
+
+.xh_home_news .area h3 a {
+    font:12px '宋体',Arial,Helvetica,sans-serif;
+    padding-left:147px;
+    color:#000;
+    font-weight:normal;
+}
+.xh_home_news .area ul {
+    padding:10px 0 5px 0;
+    height:auto!important;
+    min-height:187px;
+    height:187px;
+    padding-bottom:0px;
+}
+.xh_home_news .area li {
+    height:25px;
+    line-height:25px;
+    padding-left:8px;
+    background:url(../images/icon4.jpg) no-repeat left center;
+    color:#999999;
+    position:relative;
+}
+.xh_home_news .area li a {
+    color:#DF0A0C;
+}
+.xh_home_news .area li a:hover {
+    color:#ccc;
+}
+.xh_home_news .area li span.datetime{
+position:absolute;
+    top:0px;
+    right:0px;
+}
+.xh_home_news .underline_area {
+    height:5px;
+    line-height:5px;
+    font-size:0px;
+    background:url(../images/back.gif) no-repeat -141px -79px;
+}
+.xh_home_news .area_ad img {
+    border:1px solid #cfd8df;
+}
+ 
+
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:xh_home_news
+ * Style:xh_home_news
+ * Desc::ArticleList.Default部件的样式
+ * Quot:
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:xh_home_news
+ * Style:null
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/
+.null .area {
+	width:360px;
+	margin-top:10px;
+}
+.null .area h3 {
+	height:30px;
+	line-height:30px;
+	background:url(../images/back1.gif) no-repeat;
+	font-size:12px;
+	color:#fff;
+	position:relative; text-indent:20px;
+}
+/*******标题自适应***********/
+.null .area h3 span {
+	background:url(../images/sidebar.gif) no-repeat left top;
+	display:inline-block;
+	padding-left:35px;
+}
+.null .area h3 em {
+	background:url(../images/sidebar.gif) no-repeat right -33px;
+	padding-right:35px;
+	color:#fff;
+	display:inline-block;
+}
+.null .area h3 em a {
+	color:#fff;
+}
+.null .area h3 em a:hover {
+	color:#ffff00;
+}
+
+.null .area h3 img {
+	position:absolute;
+	top:10px;
+	left:320px;
+}
+.null .area ul {
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+        border-bottom:1px solid #e1e1e1;
+	background:url(../images/area_back.gif) repeat-x left top;
+	padding:10px;
+	height:auto!important;
+	min-height:187px;
+	height:187px;
+	padding-bottom:0px;
+}
+.null .area li {
+	height:23px;
+	line-height:23px;
+	padding-left:8px;
+	background:url(../images/icon3.gif) no-repeat left center;
+	color:#999999;
+	position:relative;
+}
+.null .area li a {
+	color:#313534;
+}
+.null .area li a:hover {
+	color:#cc0000;
+}
+.null .area li span.datetime{
+position:absolute;
+	top:0px;
+	right:5px;
+}
+.null .underline_area {
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	background:url(../images/back.gif) no-repeat -141px -79px;
+}
+.null .area_ad img {
+	border:1px solid #cfd8df;
+}
+ 
+/*************************************************************
+ * Command:End
+ * Control:xh_home_news
+ * Style:null
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:xh_home_news
+ * Style:null
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/
+.null .area {
+	width:360px;
+	margin-top:10px;
+}
+.null .area h3 {
+	height:30px;
+	line-height:30px;
+	background:url(../images/back1.gif) no-repeat;
+	font-size:12px;
+	color:#fff;
+	position:relative; text-indent:20px;
+}
+/*******标题自适应***********/
+.null .area h3 span {
+	background:url(../images/sidebar.gif) no-repeat left top;
+	display:inline-block;
+	padding-left:35px;
+}
+.null .area h3 em {
+	background:url(../images/sidebar.gif) no-repeat right -33px;
+	padding-right:35px;
+	color:#fff;
+	display:inline-block;
+}
+.null .area h3 em a {
+	color:#fff;
+}
+.null .area h3 em a:hover {
+	color:#ffff00;
+}
+
+.null .area h3 img {
+	position:absolute;
+	top:10px;
+	left:320px;
+}
+.null .area ul {
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+        border-bottom:1px solid #e1e1e1;
+	background:url(../images/area_back.gif) repeat-x left top;
+	padding:10px;
+	height:auto!important;
+	min-height:187px;
+	height:187px;
+	padding-bottom:0px;
+}
+.null .area li {
+	height:23px;
+	line-height:23px;
+	padding-left:8px;
+	background:url(../images/icon3.gif) no-repeat left center;
+	color:#999999;
+	position:relative;
+}
+.null .area li a {
+	color:#313534;
+}
+.null .area li a:hover {
+	color:#cc0000;
+}
+.null .area li span.datetime{
+position:absolute;
+	top:0px;
+	right:5px;
+}
+.null .underline_area {
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	background:url(../images/back.gif) no-repeat -141px -79px;
+}
+.null .area_ad img {
+	border:1px solid #cfd8df;
+}
+ 
+/*************************************************************
+ * Command:End
+ * Control:xh_home_news
+ * Style:null
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:xh_home_news
+ * Style:null
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/
+.null .area {
+	width:360px;
+	margin-top:10px;
+}
+.null .area h3 {
+	height:30px;
+	line-height:30px;
+	background:url(../images/back1.gif) no-repeat;
+	font-size:12px;
+	color:#fff;
+	position:relative; text-indent:20px;
+}
+/*******标题自适应***********/
+.null .area h3 span {
+	background:url(../images/sidebar.gif) no-repeat left top;
+	display:inline-block;
+	padding-left:35px;
+}
+.null .area h3 em {
+	background:url(../images/sidebar.gif) no-repeat right -33px;
+	padding-right:35px;
+	color:#fff;
+	display:inline-block;
+}
+.null .area h3 em a {
+	color:#fff;
+}
+.null .area h3 em a:hover {
+	color:#ffff00;
+}
+
+.null .area h3 img {
+	position:absolute;
+	top:10px;
+	left:320px;
+}
+.null .area ul {
+	border-left:1px solid #e1e1e1;
+	border-right:1px solid #e1e1e1;
+        border-bottom:1px solid #e1e1e1;
+	background:url(../images/area_back.gif) repeat-x left top;
+	padding:10px;
+	height:auto!important;
+	min-height:187px;
+	height:187px;
+	padding-bottom:0px;
+}
+.null .area li {
+	height:23px;
+	line-height:23px;
+	padding-left:8px;
+	background:url(../images/icon3.gif) no-repeat left center;
+	color:#999999;
+	position:relative;
+}
+.null .area li a {
+	color:#313534;
+}
+.null .area li a:hover {
+	color:#cc0000;
+}
+.null .area li span.datetime{
+position:absolute;
+	top:0px;
+	right:5px;
+}
+.null .underline_area {
+	height:5px;
+	line-height:5px;
+	font-size:0px;
+	background:url(../images/back.gif) no-repeat -141px -79px;
+}
+.null .area_ad img {
+	border:1px solid #cfd8df;
+}
+ 
+
+/*************************************************************
+ * Command:End
+ * Control:xh_home_news
+ * Style:null
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/

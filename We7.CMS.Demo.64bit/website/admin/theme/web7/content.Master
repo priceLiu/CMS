@@ -1,0 +1,106 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="content.master.cs" Inherits="We7.CMS.Web.Admin.theme.web7.content" %>
+
+<%@ Register Assembly="We7.CMS.UI" Namespace="We7.CMS.Controls" TagPrefix="WEC" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>管理 -
+        <%=SiteHeadTitle%>
+        - Powered by
+        <%=ProductBrand %></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="shortcut icon" href="../../../favicon.ico" />
+    <link rel="stylesheet" href="css/we7-admin.css?20111031002" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../Style/main.css?20110808001" media="screen" />
+    <!--[if gte IE 6]>
+    <link rel='stylesheet' href='css/ie.css' type='text/css' media='all' />
+    <![endif]-->
+    <script type="text/javascript" src="/admin/Ajax/jquery/jquery.js"></script>
+    <script type="text/javascript" src="/admin/cgi-bin/DialogHelper.js" ></script>
+    <script type="text/javascript">
+        /* <![CDATA[ */
+        userSettings = {
+            url: "/",
+            uid: "1",
+            time: "1235697253"
+        }
+        /* ]]> */
+    </script>
+</head>
+<body class="we7-admin">
+    <form id="mainForm" runat="server">
+    <div id="we7wrap">
+        <div id="we7content">
+            <div id="topCustomMenu">
+            </div>
+            <asp:Literal runat="server" ID="GroupHolder"></asp:Literal>
+            <div id="waitLayer" style="z-index: 99; position: absolute; padding: 20px 15px;">
+                <img src="/admin/images/ajax-loader.gif" />
+            </div>
+            <div id="we7body">
+                <div style="overflow: hidden;" id="we7body-content">
+                    <div class="wrap">
+                        <asp:ContentPlaceHolder ID="MyContentPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+                <!-- we7body-content -->
+                <div class="clear">
+                </div>
+            </div>
+            <!-- we7body -->
+            <div class="clear">
+            </div>
+        </div>
+        <!-- we7content -->
+    </div>
+    <!-- we7wrap -->
+    <div id="mask" class="mask">
+    </div>
+    <div id="we7footer">
+        <p id="footer-left" class="alignleft">
+            <span id="footer-thankyou">
+                <asp:Literal ID="CopyrightLiteral" runat="server"></asp:Literal>
+            </span>
+            <asp:Literal ID="AuthorLinksLiteral" runat="server"></asp:Literal>
+        </p>
+        <p id="footer_upgrade" class="alignright" runat="server" visible="true">
+            <span id="menuLists"></span>
+            <strong>
+                |
+                <asp:HyperLink runat="server" ID="RebootHyperLink" ToolTip="重启网站，重新加载所有参数" Text="重启" />
+                | <a href="/install/upgrade.aspx" target="_blank" title="升级We7系统到新版本">升级</a>
+                | <asp:LinkButton  runat="server" ID="ReIndexHyperLink" 
+                ToolTip="重建模板、部件、控件、主题索引" Text="重建索引" onclick="ReIndexHyperLink_Click" />
+            </strong>
+        </p>
+        <div class="clear">
+        </div>
+    </div>
+    </form>
+    <script type="text/javascript" src="/admin/cgi-bin/Menu/common.js"></script>
+    <script type="text/javascript" src="/admin/cgi-bin/Menu/hoverIntent.js"></script>
+    <script type="text/javascript" src="/admin/theme/web7/js/web7Menu.js" ></script>
+    <script type="text/javascript">
+        (function ($) {
+            var siteMenuStyle = '<%=MenuStyle%>Menu';
+            adminMenu.menuStyle = siteMenuStyle;
+
+            $(document).ready(function () {
+                $("#frameSites").hide();
+                checkGroup();
+            });
+
+            function checkGroup() {
+                var remote = $("#wdUrl").val();
+                if (remote) {
+                    $("#frameSites").show();
+                    $("#frameSites").attr("Src", remote);
+                }
+            }
+        })(jQuery);
+      </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿#set ($pre='###')
+#set ($pre2='#')
+<!--${pre} name="$model.Label反馈列表(自动布局)" type="system" version="1.0" created="$CurrentDate" 
+desc="$model.Desc" author="We7 Group" ${pre}-->
+<%@ Control Language="C#" AutoEventWireup="true" Inherits="We7.CMS.WebControls.AdviceProviderEx" %>
+<script type="text/javascript" src="/Admin/Ajax/advicecheck.js"></script>
+<div css="$model.ModelName.Replace(".","_")_<%=CssClass%>">
+<table>
+    <% foreach (AdviceInfo Item in Items)
+       { %>
+    <tr>
+        <td>
+            <%=Item.SN %>
+        </td>
+        <td> 
+         <%  if (Item.Public==1)
+              { %>
+        <a href="<%=GetUrl(Item.ID) %>">
+        <%} else {%>
+        <a href="<%=GetUrl(Item.ID) %>" onclick="return checkadvice(this,'<%=Item.ID%>')">
+        <%}%>
+            <%=Item.Title %></a>
+        </td>
+        <td>
+           <%=Item.Name %>
+        </td>
+        <td>
+            <%=Item.Created.ToString("yyyy-MM-dd") %>
+        </td>
+        <td>
+            <%=Item.StateText %>
+        </td>
+        #foreach($item in $columns)
+		   <td>
+				<%=Item["$item.Name"] %>
+		   </td>
+	    #end
+    </tr>
+    <%} %>
+</table>
+</div>
+<%--系统提供的方法
+string ToStr(object fieldValue)//转换为字符串函数【fieldValue:要转换的字段】
+string ToStr(object fieldValue, int maxlength)//截取字符函数【fieldValue:要截取的字段；maxlength:最大长度】
+ToStr(Item.Title, TitleLength)//截取标题长度
+ToStr(字段, ContentLength)//截取内容长度
+string ToStr(object fieldValue, int maxlength, string tail)//截取字符函数，可指定后缀【fieldValue:要截取的字段；maxlength:最大长度；tail:后缀】
+string ToDateStr(object fieldValue, string fmt)//转换日期函数【fieldValue:要转换的字段；fmt:时间格式】
+string ToDateStr(object fieldValue)//转换日期函数【fieldValue:要转换的字段】
+int? ToInt(object fieldValue)//转换为整数函数【fieldValue:要转换的字段】
+string GetUrl(object id)//转换为字符串函数【id:要转换的字段】
+--%>
+
+<%--表描述信息
+tablename:"$tablename"
+tabledesc:"$tabledesc"
+--%>
+

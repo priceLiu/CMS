@@ -1,0 +1,237 @@
+﻿/*************************************************************
+ * Command:Start
+ * Control:ChannelMenu.TopMenu
+ * Style:ChannelMenu_TopMenu
+ * Desc::
+ * Quot:
+*************************************************************/
+/************网站菜单*************/
+.ChannelMenu_TopMenu{
+    height:64px;background:url(../Images/menu_bg.jpg);width:100px;
+}
+.ChannelMenu_TopMenu .menu {
+    height:64px; width:960px; margin:0 auto;
+}
+.ChannelMenu_TopMenu #menubox {
+    height:32px;
+    font-size:14px; padding-top:4px;
+}
+.ChannelMenu_TopMenu #menubox li {
+    float:left;
+    font-weight:bold;
+    color:#000;
+    background:url(../images/menu_line.gif) no-repeat right top;
+    padding:0px 10px;
+    text-align:center;
+    margin-right:7px;
+    padding-left:0px;
+    cursor: pointer;
+    height:32px;
+    line-height:32px;
+    _background:url(../images/menu_line.gif) no-repeat right -1px;
+}
+
+.ChannelMenu_TopMenu #menubox li a {
+    color:#000;
+    cursor: pointer;
+
+    display:inline-block;
+}
+.ChannelMenu_TopMenu #menubox li a:hover {
+    color:#cc0000;
+}
+.ChannelMenu_TopMenu #menubox li a span {
+
+    padding-left:10px;
+
+}
+.ChannelMenu_TopMenu #menubox li a em {
+    padding-right:10px;
+}
+.ChannelMenu_TopMenu #menubox ul {
+    padding-left:15px;
+    height:32px;
+}
+.ChannelMenu_TopMenu #menubox li.current {
+    color:#333;
+}
+.ChannelMenu_TopMenu #menubox li.current a {
+    color:#fff;
+    background:url(../images/menu_line.jpg) no-repeat center top;
+    display:inline-block;
+    text-align:center;
+}
+.ChannelMenu_TopMenu #menubox li.current span, #menubox li.current span em {
+    display:inline-block;
+    background:url(../images/menu_li_left.gif) no-repeat left 4px;
+    height:32px;
+    line-height:32px;
+
+
+}
+.ChannelMenu_TopMenu #menubox li.current a:hover {
+    color:#fff;
+}
+.ChannelMenu_TopMenu #menubox li.current span em {
+    background:url(../images/menu_li_right.gif) no-repeat right 4px;
+}
+.ChannelMenu_TopMenu .sub_menu {
+    clear:both;
+    height:31px;
+    
+}
+.ChannelMenu_TopMenu .sub_center {
+    padding-left:20px;
+    color:#fff;
+}
+.ChannelMenu_TopMenu .sub_center span {
+    float:right;
+    padding-right:10px;
+}
+.ChannelMenu_TopMenu .sub_center ul {padding-top:3px;}
+.ChannelMenu_TopMenu .sub_center li {
+    float:left;
+    height:28px;
+    line-height:28px;
+}
+.ChannelMenu_TopMenu .sub_center li a {
+    color:#000;
+    margin:0px 7px;
+    padding-left:8px;
+    background:url(../images/icon.gif) no-repeat left center;
+}
+.ChannelMenu_TopMenu .sub_center li a.current {color:#fff;padding:5px;background:#1b71a4;}
+.ChannelMenu_TopMenu .sub_center li a.current:hover {color:#ffff00;text-decoration:underline;}
+.ChannelMenu_TopMenu .sub_center li a:hover {
+    color:#cc0000;
+}
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ChannelMenu.TopMenu
+ * Style:ChannelMenu_TopMenu
+ * Desc::
+ * Quot:
+*************************************************************/
+
+
+/*************************************************************
+ * Command:Start
+ * Control:ChannelMenu.TopMenu
+ * Style:aaanewStyle
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/
+/************网站菜单*************/
+.aaanewStyle{
+    height:64px;background:url(../Images/menu_bg.jpg);width:100px;
+}
+.aaanewStyle .menu {
+    height:64px; width:960px; margin:0 auto;
+}
+.aaanewStyle #menubox {
+    height:32px;
+    font-size:14px; padding-top:4px;
+}
+.aaanewStyle #menubox li {
+    float:left;
+    font-weight:bold;
+    color:#000;
+    background:url(../images/menu_line.gif) no-repeat right top;
+    padding:0px 10px;
+    text-align:center;
+    margin-right:7px;
+    padding-left:0px;
+    cursor: pointer;
+    height:32px;
+    line-height:32px;
+    _background:url(../images/menu_line.gif) no-repeat right -1px;
+}
+
+.aaanewStyle #menubox li a {
+    color:#000;
+    cursor: pointer;
+
+    display:inline-block;
+}
+.aaanewStyle #menubox li a:hover {
+    color:#cc0000;
+}
+.aaanewStyle #menubox li a span {
+
+    padding-left:10px;
+
+}
+.aaanewStyle #menubox li a em {
+    padding-right:10px;
+}
+.aaanewStyle #menubox ul {
+    padding-left:15px;
+    height:32px;
+}
+.aaanewStyle #menubox li.current {
+    color:#333;
+}
+.aaanewStyle #menubox li.current a {
+    color:#fff;
+    background:url(../images/menu_line.jpg) no-repeat center top;
+    display:inline-block;
+    text-align:center;
+}
+.aaanewStyle #menubox li.current span, #menubox li.current span em {
+    display:inline-block;
+    background:url(../images/menu_li_left.gif) no-repeat left 4px;
+    height:32px;
+    line-height:32px;
+
+
+}
+.aaanewStyle #menubox li.current a:hover {
+    color:#fff;
+}
+.aaanewStyle #menubox li.current span em {
+    background:url(../images/menu_li_right.gif) no-repeat right 4px;
+}
+.aaanewStyle .sub_menu {
+    clear:both;
+    height:31px;
+    
+}
+.aaanewStyle .sub_center {
+    padding-left:20px;
+    color:#fff;
+}
+.aaanewStyle .sub_center span {
+    float:right;
+    padding-right:10px;
+}
+.aaanewStyle .sub_center ul {padding-top:3px;}
+.aaanewStyle .sub_center li {
+    float:left;
+    height:28px;
+    line-height:28px;
+}
+.aaanewStyle .sub_center li a {
+    color:#000;
+    margin:0px 7px;
+    padding-left:8px;
+    background:url(../images/icon.gif) no-repeat left center;
+}
+.aaanewStyle .sub_center li a.current {color:#fff;padding:5px;background:#1b71a4;}
+.aaanewStyle .sub_center li a.current:hover {color:#ffff00;text-decoration:underline;}
+.aaanewStyle .sub_center li a:hover {
+    color:#cc0000;
+}
+
+
+
+
+/*************************************************************
+ * Command:End
+ * Control:ChannelMenu.TopMenu
+ * Style:aaanewStyle
+ * Desc:目前没有
+ * Quot:group1
+*************************************************************/

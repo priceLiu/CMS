@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>查询字段配置</title>
+    <style type="text/css">
+        body {
+            font-size: 12px;
+        }
+        ul,li {
+            list-style: none;
+        }
+        ul {
+            margin-left: 0;
+            padding-left: 20px;
+        }
+        li {
+            padding: 3px 0;
+            line-height: 100%;
+        }
+        #buttons {
+            text-align: right;
+            padding: 4px 10px;
+        }
+        #fieldlist-container {
+            width: 470px;
+            height: 340px;
+            overflow-y: scroll;
+            border: 1px  #CCC solid;
+        }
+        #edtSearchbtn{ width: 300px;}
+    </style>
+</head>
+<body>
+    <input type="text" id="edtSearchbtn" placeholder="选择或搜索字段" />
+    <div id="fieldlist-container">
+        
+    </div>
+    <div id="buttons">
+        <input type="button" value="确定" id="btnSubmit" name="btnSubmit" />
+        <input type="button" value="取消" id="btnUndo" name="btnUndo" />
+     </div>
+    <script src="/Admin/Ajax/jquery/jquery.js" type="text/javascript"></script>
+    <script src="SearchInfoConfigure.js" type="text/javascript"></script>
+    <script src="/Scripts/jQuery/placeholder.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var options = window.opener.$.widgetSearchConf.defaultVal;
+            options.fieldContainer = "#fieldlist-container";
+            options.searchForKeydown = "#edtSearchbtn";
+            $.widgetSearchConf.initSearch(options);
+
+            $("#btnUndo").click(function () {
+                window.close();
+            });
+
+            $("#btnSubmit").click(function () {
+                window.opener.$.widgetSearchConf.initItem($.widgetSearchConf.defaultVal);
+                window.close();
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <!--1、只允许本部门及子部门的账号查看 2、只允许查看本部门发布的信息 3、只允许查看自己发布的信息 4、不限制-->
+  <ArticlepermissionType>1</ArticlepermissionType>
+  <AdvicepermissionType>4</AdvicepermissionType>
+</configuration>

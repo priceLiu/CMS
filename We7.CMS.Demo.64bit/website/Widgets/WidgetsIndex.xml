@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="default" label="部件列表信息" description="部件列表信息">
+  <group name="系统部件" label="系统部件" description="系统部件">
+    <widget name="QTL634879092334738311" label="其他类" description="其他类" icon="其他类" defaulttype="UserRegister.Simple">
+      <type name="UserRegister.Simple" label="用户注册" file="/Widgets/WidgetCollection/其他类/User.Register/UserRegister.Simple.ascx" control="UserRegister_Simple" updated="04/12/2012 16:20:21" />
+      <type name="xh_home_news" label="西湖首页之西湖要闻" file="/Widgets/WidgetCollection/其他类/xh_home_news/xh_home_news.ascx" control="xh_home_news" updated="11/07/2012 18:05:45" />
+      <type name="Statistic.Default" label="网站统计" file="/Widgets/WidgetCollection/其他类/Statistic.Default/Statistic.Default.ascx" control="Statistic_Default" updated="12/06/2011 10:28:59" />
+      <type name="Login.Default" label="登录" file="/Widgets/WidgetCollection/其他类/Login.Default/Login.Default.ascx" control="Login_Default" updated="09/04/2012 15:11:04" />
+    </widget>
+    <widget name="NRMXL634879092344568873" label="内容模型类" description="lixijiao信息编辑部件" icon="lixijiao信息编辑部件" defaulttype="advice_lixijiaoEdit">
+      <type name="advice_lixijiaoEdit" label="lixijiao信息编辑部件" file="/Widgets/WidgetCollection/内容模型类/advice_lixijiaoEdit/advice_lixijiaoEdit.ascx" control="advice_lixijiaoEdit" updated="10/29/2012 10:53:30" />
+      <type name="advice_lixijiaoList" label="lixijiao信息列表部件" file="/Widgets/WidgetCollection/内容模型类/advice_lixijiaoList/advice_lixijiaoList.ascx" control="advice_lixijiaoList" updated="10/30/2012 17:28:35" />
+      <type name="advice_lixijiaoQueryList" label="lixijiao查询列表部件" file="/Widgets/WidgetCollection/内容模型类/advice_lixijiaoQueryList/advice_lixijiaoQueryList.ascx" control="advice_lixijiaoQueryList" updated="10/29/2012 10:53:30" />
+      <type name="advice_lixijiaoView" label="lixijiao详细信息部件" file="/Widgets/WidgetCollection/内容模型类/advice_lixijiaoView/advice_lixijiaoView.ascx" control="advice_lixijiaoView" updated="10/29/2012 10:53:30" />
+      <type name="article_fuckModelView.Default" label="fuckModel详细信息部件" file="/Widgets/WidgetCollection/内容模型类/article_fuckModelView/article_fuckModelView.Default.ascx" control="article_fuckModelView_Default" updated="10/29/2012 10:38:50" />
+      <type name="article_fuckModelList.Default" label="fuckModel列表部件" file="/Widgets/WidgetCollection/内容模型类/article_fuckModelList/article_fuckModelList.Default.ascx" control="article_fuckModelList_Default" updated="10/29/2012 10:38:50" />
+      <type name="article_qqPagedList.Default" label="qq分页列表部件" file="/Widgets/WidgetCollection/内容模型类/article_qqPagedList/article_qqPagedList.Default.ascx" control="article_qqPagedList_Default" updated="10/29/2012 10:40:05" />
+      <type name="article_qqList.Default" label="qq列表部件" file="/Widgets/WidgetCollection/内容模型类/article_qqList/article_qqList.Default.ascx" control="article_qqList_Default" updated="10/29/2012 10:40:05" />
+      <type name="article_fuckModelPagedList.Default" label="fuckModel分页列表部件" file="/Widgets/WidgetCollection/内容模型类/article_fuckModelPagedList/article_fuckModelPagedList.Default.ascx" control="article_fuckModelPagedList_Default" updated="10/29/2012 10:38:50" />
+      <type name="article_qqView.Default" label="qq详细信息部件" file="/Widgets/WidgetCollection/内容模型类/article_qqView/article_qqView.Default.ascx" control="article_qqView_Default" updated="10/29/2012 10:40:05" />
+    </widget>
+    <widget name="YQLJ634879092411362694" label="友情链接" description="友情链接" icon="友情链接" defaulttype="LinkList.Default">
+      <type name="LinkList.Default" label="友情链接" file="/Widgets/WidgetCollection/友情链接/LinkList.Default/LinkList.Default.ascx" control="LinkList_Default" updated="12/06/2011 10:29:01" />
+    </widget>
+    <widget name="TWL634879092419433155" label="图文类" description="图文类" icon="图文类" defaulttype="PagedPictureArticleList.Default">
+      <type name="PagedPictureArticleList.Default" label="图片分页控件列表" file="/Widgets/WidgetCollection/图文类/PagedPictureArticleList.Default/PagedPictureArticleList.Default.ascx" control="PagedPictureArticleList_Default" updated="09/04/2012 15:11:04" />
+      <type name="FlashShow.Default" label="翻转图片" file="/Widgets/WidgetCollection/图文类/FlashShow.Default/FlashShow.Default.ascx" control="FlashShow_Default" updated="12/06/2011 10:28:59" />
+      <type name="PictureArticleList.Default" label="推荐图片文章列表" file="/Widgets/WidgetCollection/图文类/PictureArticleList.Default/PictureArticleList.Default.ascx" control="PictureArticleList_Default" updated="12/06/2011 10:28:59" />
+    </widget>
+    <widget name="DHL634879092420753231" label="导航类" description="导航类" icon="导航类" defaulttype="ChannelMenu.CurrentLocation">
+      <type name="ChannelMenu.CurrentLocation" label="当前位置1" file="/Widgets/WidgetCollection/导航类/ChannelMenu.CurrLocation/ChannelMenu.CurrentLocation.ascx" control="ChannelMenu_CurrentLocation" updated="11/06/2012 16:10:42" />
+      <type name="ChannelMenu.DropDown" label="网站浮动菜单显示两级" file="/Widgets/WidgetCollection/导航类/ChannelMenu.DropDown/ChannelMenu.DropDown.ascx" control="ChannelMenu_DropDown" updated="10/22/2012 18:51:57" />
+      <type name="ChannelMenu.TopMenu" label="网站顶部菜单显示两级" file="/Widgets/WidgetCollection/导航类/ChannelMenu.TopMenu/ChannelMenu.TopMenu.ascx" control="ChannelMenu_TopMenu" updated="11/06/2012 16:10:42" />
+      <type name="Sidebar.ChannelNav" label="侧栏导航控件" file="/Widgets/WidgetCollection/导航类/Sidebar.ChannelNav/Sidebar.ChannelNav.ascx" control="Sidebar_ChannelNav" updated="12/06/2011 10:28:59" />
+      <type name="SiteMap" label="网站导航菜单" file="/Widgets/WidgetCollection/导航类/SiteMap/SiteMap.ascx" control="SiteMap" updated="09/04/2012 14:33:48" />
+      <type name="TagList.Hot" label="热门标签" file="/Widgets/WidgetCollection/导航类/TagList.Hot/TagList.Hot.ascx" control="TagList_Hot" updated="12/06/2011 10:28:59" />
+    </widget>
+    <widget name="SSL634879092448194800" label="搜索类" description="搜索类" icon="搜索类" defaulttype="Search.Bar">
+      <type name="Search.Bar" label="搜索框" file="/Widgets/WidgetCollection/搜索类/Search.Bar/Search.Bar.ascx" control="Search_Bar" updated="09/04/2012 14:33:48" />
+      <type name="PagedArticleList.DefaultSearch" label="普通搜索列表" file="/Widgets/WidgetCollection/搜索类/Search.ResultUI/PagedArticleList.DefaultSearch.ascx" control="PagedArticleList_DefaultSearch" updated="12/06/2011 10:28:59" />
+      <type name="Search.SearchUI" label="高级搜索文章控件" file="/Widgets/WidgetCollection/搜索类/Search.SearchUI/Search.SearchUI.ascx" control="Search_SearchUI" updated="12/06/2011 10:28:59" />
+    </widget>
+    <widget name="WZLBL634879092458275377" label="文章列表类" description="文章列表类" icon="文章列表类" defaulttype="ArticleList.2ColumnWidthImage">
+      <type name="ArticleList.2ColumnWidthImage" label="图文混排+文字列表式显示" file="/Widgets/WidgetCollection/文章列表类/ArticleList.2ColumnWidthImage/ArticleList.2ColumnWidthImage.ascx" control="ArticleList_2ColumnWidthImage" updated="04/12/2012 16:20:21" />
+      <type name="ArticleList.SideList" label="侧边文章列表" file="/Widgets/WidgetCollection/文章列表类/ArticleList.SideList/ArticleList.SideList.ascx" control="ArticleList_SideList" updated="11/06/2012 19:24:06" />
+      <type name="LatestNews.LatestTopPicture" label="新闻动态+最新推荐+最新图文" file="/Widgets/WidgetCollection/文章列表类/LatestNews.LatestTopPictureEx/LatestNews.LatestTopPicture.ascx" control="LatestNews_LatestTopPicture" updated="04/12/2012 16:20:21" />
+      <type name="NewsTab.Speeches" label="显示指定栏目信息-纵向" file="/Widgets/WidgetCollection/文章列表类/NewsTab.Speeches/NewsTab.Speeches.ascx" control="NewsTab_Speeches" updated="09/04/2012 14:33:48" />
+      <type name="Recommand.Newest" label="最新推荐控件" file="/Widgets/WidgetCollection/文章列表类/Recommand.Newest/Recommand.Newest.ascx" control="Recommand_Newest" updated="12/06/2011 10:29:01" />
+      <type name="ArticleList.Default" label="无分页文章列表控件" file="/Widgets/WidgetCollection/文章列表类/ArticleList.Default/ArticleList.Default.ascx" control="ArticleList_Default" updated="11/06/2012 16:10:42" />
+      <type name="NewsTab.Default" label="新闻Tab选项卡" file="/Widgets/WidgetCollection/文章列表类/NewsTab.Default/NewsTab.Default.ascx" control="NewsTab_Default" updated="12/06/2011 10:29:00" />
+      <type name="PagedArticleList.Default" label="文章分页控件列表" file="/Widgets/WidgetCollection/文章列表类/PagedArticleList.Default/PagedArticleList.Default.ascx" control="PagedArticleList_Default" updated="11/06/2012 16:10:42" />
+      <type name="ArticleView.Default" label="文章详细" file="/Widgets/WidgetCollection/文章列表类/ArticleView.Default/ArticleView.Default.ascx" control="ArticleView_Default" updated="11/06/2012 16:10:42" />
+      <type name="ArticleSingle.Default" label="单篇文章详细控件" file="/Widgets/WidgetCollection/文章列表类/ArticleSingle.Default/ArticleSingle.Default.ascx" control="ArticleSingle_Default" updated="10/31/2012 11:11:48" />
+    </widget>
+    <widget name="WZYT634879092480466646" label="网站页头" description="网站页头" icon="网站页头" defaulttype="Header.LogoQueryQuick">
+      <type name="Header.LogoQueryQuick" label="带Logo带搜索带快捷导航(头)" file="/Widgets/WidgetCollection/网站页头/Header.LogoQueryQuick/Header.LogoQueryQuick.ascx" control="Header_LogoQueryQuick" updated="04/12/2012 16:20:21" />
+    </widget>
+    <widget name="WZYJ634879092480516649" label="网站页脚" description="网站页脚" icon="网站页脚" defaulttype="Footer.Default">
+      <type name="Footer.Default" label="尾部" file="/Widgets/WidgetCollection/网站页脚/Footer.Default/Footer.Default.ascx" control="Footer_Default" updated="09/04/2012 14:33:48" />
+    </widget>
+    <widget name="PLL634879092480726661" label="评论类" description="评论类" icon="评论类" defaulttype="CommentsList.Common">
+      <type name="CommentsList.Common" label="评论添加列表一体" file="/Widgets/WidgetCollection/评论类/CommentsList.Common/CommentsList.Common.ascx" control="CommentsList_Common" updated="04/12/2012 16:20:21" />
+    </widget>
+    <widget name="JTL634879092480916672" label="静态类" description="静态类" icon="静态类" defaulttype="Register.Title">
+      <type name="Register.Title" label="注册页标题" file="/Widgets/WidgetCollection/静态类/Register.Title/Register.Title.ascx" control="Register_Title" updated="12/06/2011 10:28:59" />
+      <type name="Search.Title" label="搜索结果页" file="/Widgets/WidgetCollection/静态类/Search_Title/Search.Title.ascx" control="Search_Title" updated="12/06/2011 10:28:59" />
+      <type name="top" label="设为首页" file="/Widgets/WidgetCollection/静态类/top/top.ascx" control="top" updated="12/06/2011 10:28:59" />
+    </widget>
+  </group>
+</widgets>

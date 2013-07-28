@@ -1,0 +1,138 @@
+﻿<?xml version="1.0"?>
+<ModelInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" type="article" label="默认共享模型配置" desc="默认共享模型配置" authority="false" RelationModelName="" SiteID="{543b5dea-82bf-4a76-b059-628883c0ce3f}" DBConnectionString="Provider=Microsoft.Jet.OleDb.4.0;Data Source=D:\LanWeiWei\cms源码\特定功能开发调试源码\信息模型共享\We7CMS_2010\We7.CMS.Web\App_data\DB\We7_CMS_DB;Persist Security Info=True;" IsShare="true" Updated="2012-08-10T19:19:40.1898827+08:00" DBDriver="Thinkment.Data.OleDbDriver" DBType="Thinkment.Data.OleDbDriver">
+    <dataSet>
+        <dataTable name="mrgxmxpz">
+            <dataColumn name="ID" label="ID" dataType="String" expression="" direction="InputOutput" system="true" mapping="ID" maxlength="40" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="AccountID" label="用户ID" dataType="String" expression="" direction="Output" system="true" maxlength="40" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="OwnerID" label="栏目ID" dataType="String" expression="" direction="Output" system="false" mapping="OwnerID" maxlength="40" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="Source" label="来源" dataType="String" expression="" direction="InputOutput" system="true" mapping="Source" maxlength="50" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="ContentType" label="文章类型" dataType="Int32" expression="" direction="Output" system="true" mapping="ContentType" maxlength="0" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="ContentUrl" label="引用Url" dataType="String" expression="" direction="Output" system="true" mapping="ContentUrl" maxlength="255" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="State" label="状态" dataType="Int32" expression="" direction="Output" system="true" mapping="State" maxlength="0" default="1" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="Index" label="排序" dataType="Int32" expression="" direction="Output" system="true" mapping="SequenceIndex" maxlength="0" default="999" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="IsShow" label="置顶" dataType="Int32" expression="" direction="Output" system="true" mapping="IsShow" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="Tags" label="标签" dataType="String" expression="" direction="Output" system="true" maxlength="255" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="Updated" label="更新时间" dataType="DateTime" expression="" direction="InputOutput" system="true" maxlength="0" default="Now" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="Created" label="创建时间" dataType="DateTime" expression="" direction="Output" system="true" mapping="Created" maxlength="0" default="Now" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="ProcessState" label="审批当前进程" dataType="String" expression="" direction="Output" system="true" maxlength="50" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="ProcessDirection" label="流转来源方向" dataType="String" expression="" direction="Output" system="true" maxlength="50" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="ProcessSiteID" label="拥有处置权限的站点ID" dataType="String" expression="" direction="Output" system="true" maxlength="40" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="FullPath" label="栏目路径" dataType="String" expression="" direction="Output" system="true" maxlength="254" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="Clicks" label="点击量" dataType="Int32" expression="" direction="Input" system="true" mapping="" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="DayClicks" label="日点击量" dataType="Int32" expression="" direction="Input" system="true" mapping="" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="YesterdayClicks" label="昨日点击量" dataType="Int32" expression="" direction="Input" system="true" mapping="" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="WeekClicks" label="周点击量" dataType="Int32" expression="" direction="Input" system="true" mapping="" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="MonthClicks" label="月点击量" dataType="Int32" expression="" direction="Input" system="true" mapping="" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="QuarterClicks" label="季点击量" dataType="Int32" expression="" direction="Input" system="true" mapping="" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="YearClicks" label="年点击量" dataType="Int32" expression="" direction="Input" system="true" mapping="" maxlength="0" nullable="false" require="false" edit="false" list="true" />
+            <dataColumn name="FromSiteID" label="站点ID" dataType="String" direction="Input" system="false" mapping="" maxlength="40" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="SiteName" label="站点名称" dataType="String" direction="Output" system="false" mapping="" maxlength="250" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="SharedSiteIDs" label="共享站点" dataType="String" direction="Output" system="false" mapping="" maxlength="99999" nullable="false" require="false" edit="false" list="false" />
+            <dataColumn name="Title" label="标题" dataType="String" direction="Output" system="false" mapping="" maxlength="250" nullable="false" require="false" edit="false" list="false" />
+        </dataTable>
+    </dataSet>
+    <layout>
+        <panel name="edit" label="后台录入面板">
+            <edit path="we7.Editor" visible="true">
+                <group name="默认" index="0" next="0" enable="true">
+                    <control id="ID" name="ID" label="ID" type="GUID" width="" height="" css="" default="" required="false" desc="" visible="false" ignore="false" />
+                    <control id="Title" name="Title" label="标题" type="TextInput" required="false" visible="true" ignore="false" />
+                    <control id="FromSiteID" name="FromSiteID" label="站点ID" type="SiteID" required="false" visible="false" ignore="false" />
+                    <control id="SiteName" name="SiteName" label="站点名称" type="SiteName" required="false" visible="false" ignore="false" />
+                    <control id="SharedSiteIDs" name="SharedSiteIDs" label="共享站点" type="We7.Sites" required="false" visible="true" ignore="false" />
+                </group>
+            </edit>
+            <list visible="false" />
+            <pager visible="false" />
+            <condition path="we7.Condition" visible="false">
+                <control id="ID" name="ID" label="ID" type="Request" required="false" visible="false" ignore="false" />
+            </condition>
+            <command visible="false" />
+            <navigation visible="false" />
+            <context>
+                <pageSize>10</pageSize>
+                <orders>ID</orders>
+                <dataKey>ID</dataKey>
+            </context>
+        </panel>
+        <panel name="list" label="后台列表面板">
+            <edit visible="false" />
+            <list path="we7.List" visible="true">
+                <group name="传统列表" index="0" next="0" enable="true">
+                    <column name="Title" label="标题" width="" height="" type="html" align="NotSet" index="0" visible="true" isThumb="false" isLink="false" mapping="" expr="" convert="" />
+                    <column name="SiteName" label="来源" width="" height="" type="html" align="NotSet" index="1" visible="true" isThumb="false" isLink="false" mapping="" expr="" convert="" />
+                    <column name="Manage" label="管理" width="100" height="" type="action" align="Center" index="2" visible="true" isThumb="false" isLink="false" mapping="" expr="" convert="">
+                        <param name="cmd" value="view()|edit()|delete" />
+                        <param name="cmdText" value="查看|编辑|删除" />
+                    </column>
+                </group>
+                <group name="矩阵行列" index="1" next="0" enable="false">
+                    <column name="" label="标题" width="120" type="link" align="NotSet" index="1" visible="true" isThumb="false" isLink="false" />
+                    <column name="" label="图片" width="120" type="thumb" align="NotSet" index="2" visible="true" isThumb="true" isLink="false" />
+                    <column name="Manage" label="管理" width="120" height="15" type="action" align="Center" index="3" visible="true" isThumb="false" isLink="false" mapping="" expr="" convert="">
+                        <param name="cmd" value="view()|edit()|delete" />
+                        <param name="cmdText" value="查看|编辑|删除" />
+                    </column>
+                </group>
+            </list>
+            <pager path="we7.Pager" visible="true" />
+            <condition path="we7.Condition" visible="true">
+                <control id="SiteName" name="SiteName" label="来源" type="TextInput" width="" height="" css="" default="" required="false" desc="" visible="true" ignore="false">
+                    <param name="operater" value="like" />
+                </control>
+                <control id="Title" name="Title" label="标题" type="TextInput" width="" height="" css="" default="" required="false" desc="" visible="true" ignore="false">
+                    <param name="operater" value="like" />
+                </control>
+                <control id="SharedSiteIDs" name="SharedSiteIDs" label="站点" type="SiteID" width="" height="" css="" default="" required="false" desc="" visible="false" ignore="false">
+                    <param name="operater" value="like" />
+                </control>
+            </condition>
+            <command path="we7.Command" visible="true" />
+            <navigation visible="false" />
+            <context>
+                <pageSize>10</pageSize>
+                <orders>Index,IsShow Desc,Updated Desc,ID Desc</orders>
+                <dataKey>ID</dataKey>
+            </context>
+        </panel>
+        <panel name="multi" label="会员中心显示面板">
+            <edit path="System.CascadeEditor" visible="true">
+                <group name="默认" index="0" next="0" enable="true">
+                    <control id="ID" name="ID" label="ID" type="GUID" required="true" visible="false" ignore="false" />
+                </group>
+            </edit>
+            <list path="we7.List" visible="true">
+                <group name="传统列表" index="0" next="0" enable="true">
+                    <column name="Manage" label="管理" width="100" type="action" align="Center" index="2" visible="true" isThumb="false" isLink="false" mapping="">
+                        <param name="cmd" value="view()|edit()|delete" />
+                        <param name="cmdText" value="查看|编辑|删除" />
+                    </column>
+                </group>
+                <group name="矩阵行列" index="1" next="0" enable="false">
+                    <column name="" label="标题" width="120" type="link" align="NotSet" index="1" visible="true" isThumb="false" isLink="false" />
+                    <column name="" label="图片" width="120" type="thumb" align="NotSet" index="2" visible="true" isThumb="true" isLink="false" />
+                    <column name="Manage" label="管理" width="120" height="15" type="action" align="Center" index="3" visible="true" isThumb="false" isLink="false" mapping="" expr="" convert="">
+                        <param name="cmd" value="view()|edit()|delete" />
+                        <param name="cmdText" value="查看|编辑|删除" />
+                    </column>
+                </group>
+            </list>
+            <pager path="System.SimplePager" visible="true" />
+            <condition path="System.SimpleCondition" visible="true">
+                <control id="OwnerID" name="OwnerID" label="栏目ID" type="Request" required="false" visible="false" ignore="false">
+                    <param name="param" value="oid" />
+                </control>
+            </condition>
+            <command path="System.SimpleCommand" visible="true" />
+            <navigation path="System.SimplenNavigation" visible="true" />
+            <context>
+                <pageSize>10</pageSize>
+                <orders>Index,IsShow Desc,Updated Desc,ID Desc</orders>
+                <dataKey>ID</dataKey>
+            </context>
+        </panel>
+        <UCContrl>
+            <createEditor>false</createEditor>
+        </UCContrl>
+    </layout>
+</ModelInfo>

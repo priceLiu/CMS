@@ -1,0 +1,164 @@
+﻿@import url('color.css');
+@import url('label.css');
+/* 同时设置html是为了兼容FF */
+body
+{
+	font-size: 12px;
+	color: black;
+	line-height: 150%;
+	background-color: #fff;
+	text-align: center;
+	height: 100%; /*width: 98%;*/ /*下面是后来加上的*/
+	width: 100%;
+	background: #ECF7FE url(admin/skin/images/bg_body.jpg) repeat-y top left;
+	scrollbar-face-color: #E7F5FE;
+	scrollbar-highlight-color: #006699;
+	scrollbar-shadow-color: #006699;
+	scrollbar-3dlight-color: #E7F5FE;
+	scrollbar-arrow-color: #006699;
+	scrollbar-track-color: #E7F5FE;
+	scrollbar-darkshadow-color: #E7F5FE;
+	scrollbar-base-color: #E7F5FE;
+}
+/*后台头部*/
+#header
+{
+	background: url(images/bg_admin.jpg) repeat-x 0 0;
+	height: 58px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 12;
+	border-bottom: 5px solid #069;
+}
+/*左边*/
+#frame_left
+{
+	width: 220px;
+	float: left;
+	display: inline;
+	height:100%;
+	border-right:solid 1px #069;
+}
+
+#frame_right
+{
+	width:expression(this.parentNode.offsetWidth-221+'px');
+	float: left;
+	display:block;
+	height:100%;
+}
+
+#nav
+{
+	background: url(images/position.gif) repeat-x 0 -1px ; position:relative;
+	border-bottom:solid 1px #069;
+}
+
+/*左边*/
+#admin_left
+{
+	width: 220px;
+	float: left;
+	display: inline;
+	position: absolute;
+	top: 62px;
+	bottom: 0;
+	left: 0;
+	z-index: 11;
+}
+/*logo*/
+.logo
+{
+	float:left;
+}
+.info_bar { float:right; color:#fff;}
+a.white:link, a.white:visited {color:#fff;}
+a.white:hover, a.white:active {color:#fff;}
+/*菜单*/
+#menu {position:absolute; top:29px; right:5px;}
+#menu li { float:left; list-style:none; text-align:right;}
+#menu li a { cursor:pointer; float:left; color:#fff; background:url(images/menu_l.gif) no-repeat 0 0; height:29px; line-height:29px;}
+#menu li a span { background:url(images/menu_r.gif) no-repeat right 0; padding:0 10px; display:block; float:left;}
+#menu li a:hover,#menu li a.selected { color:#ff0; background:url(images/menu_l.gif) no-repeat 0 -29px; height:29px; line-height:29px;}
+#menu li a:hover span,#menu li a.selected span { color:#ff0; background-position:right -29px; padding:0 10px;}
+#menu li a img { margin:9px 0;}
+
+#content{width:100%; height:100%; background-color:White;}
+
+#mycontent{ text-align: left;padding: 4px 10px;}
+#mycontent table,tr,td{ border-spacing: 4px;padding: 4px;}
+#mycontent label{ display: inline;padding: 4px;}
+#mycontent .TitleText{ width: 450px;margin: 4px;}
+.block_info{ display: inline;}
+.pagination {
+   background:  #DFDFDF url(/admin/images/gray-grad.png) repeat-x scroll left top;
+   color:  #666;
+   padding: 4px 2px 4px 5px;
+   border: 1px solid #DDD;
+   margin: 0 0 1.5em 0;
+   height: 25px;
+}
+.subsubsub li {
+   display: inline;
+   margin: 0;
+   padding: 0;
+}
+table th {
+   FONT-SIZE: 12px;
+   COLOR: #9ebecb;
+   LINE-HEIGHT: 250%;
+   TEXT-ALIGN: left;
+   border: 0px;
+}
+table.List {
+   BORDER: #dfdfdf 1px solid;
+   width: 100%;
+   min-height: 35px;
+   border: 1px solid #DFDFDF;
+}
+table.List th, table.List thead tr {
+   text-align: left;
+   color: #333;
+   background: #DFDFDF url(/admin/images/gray-grad.png) repeat-x scroll left top;
+   text-shadow:rgba(255, 255, 255, 0.8) 0 1px 0;
+   padding: 2px 7px;
+}
+table.List tr:hover {
+   background-color: #DDF;
+}
+
+.pagination {
+   background: #DFDFDF url(/admin/images/gray-grad.png) repeat-x scroll left top;
+   color: #666;
+   padding: 4px 2px 4px 5px;
+   border: 1px solid #DDD;
+   margin: 0 0 1.5em 0;
+   height: 25px;
+}
+
+.subsubsub {
+   list-style: none;
+   margin: 8px 0 0px;
+   padding: 0;
+   white-space: nowrap;
+   font-size: 12px;
+   float: left;
+}
+
+.pagination .subsubsub {
+   margin: 2px 0 0px!important;
+}
+
+div.Pager {
+   padding-top: 2px;
+   margin-top: 3px;
+   margin-right: 10px;
+   padding-bottom: 4px;
+   margin-bottom: 8px;
+   float: right;
+}
+p.search-box {
+   float: right;
+   margin: 5px 0 0;
+}
